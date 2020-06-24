@@ -7,6 +7,8 @@ const weather = require("./weather");
 
 // getting express function
 const app = express();
+// setting up ports for heroku
+const port = process.env.PORT || 3000;
 
 // defining locations
 
@@ -72,8 +74,8 @@ app.get("/weather", (req, res) => {
 // });
 
 // listining the server at spcified port
-app.listen(3001, () => {
-  console.log("Server Started");
+app.listen(port, () => {
+  console.log(`Server Started at port ${port}`);
 });
 
 // query in url starts from '?'

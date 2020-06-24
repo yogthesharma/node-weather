@@ -9,7 +9,7 @@ btn.addEventListener("click", () => {
 
   // fetching operation
 
-  fetch(`http://localhost:3001/weather?weather=${inp}`)
+  fetch(`/weather?weather=${inp}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {
